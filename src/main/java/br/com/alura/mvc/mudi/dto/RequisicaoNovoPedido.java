@@ -1,11 +1,15 @@
 package br.com.alura.mvc.mudi.dto;
 
 import br.com.alura.mvc.mudi.model.Pedido;
+import jakarta.validation.constraints.NotBlank;
 
 public record RequisicaoNovoPedido(
 
+        @NotBlank
         String nomeProduto,
+        @NotBlank
         String urlProduto,
+        @NotBlank
         String urlImagem,
         String descricao
 ) {
